@@ -10,26 +10,29 @@ async function listOnlineMembers(msg, args) {
   }
 
   const users = getConnectedUsers();
+  if (users.length === 0) {
+    msg.channel.send("There are no online users");
+  } else {
+    const nameData = [];
+    await Promise.all(
+      users.map(async (userId) => {
+        const name = await getName(userId);
+        const discordName = await getDiscordName(userId);
+        nameData.push([name, discordName]);
+      })
+    );
 
-  const nameData = [];
-  await Promise.all(
-    users.map(async (userId) => {
-      const name = await getName(userId);
-      const discordName = await getDiscordName(userId);
-      nameData.push([name, discordName]);
-    })
-  );
+    const header = ["Name", "Discord username"];
 
-  const header = ["Name", "Discord username"];
+    const options = {
+      entriesPerPage: 15,
+      tabular: {
+        header: header,
+      },
+    };
 
-  const options = {
-    entriesPerPage: 15,
-    tabular: {
-      header: header,
-    },
-  };
-
-  await sendPaginatedMsg(msg, nameData, options);
+    await sendPaginatedMsg(msg, nameData, options);
+  }
 }
 
 module.exports = {
