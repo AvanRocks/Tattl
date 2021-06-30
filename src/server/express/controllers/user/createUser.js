@@ -12,7 +12,11 @@ async function createUser(req, res) {
   }
 
   console.log("here");
-  let discordNameIsValid = await isDiscordNameValid(discordName);
+  try {
+    let discordNameIsValid = await isDiscordNameValid(discordName);
+  } catch (err) {
+    console.log(err.message);
+  }
   console.log("there");
   if (!discordNameIsValid) {
     return res.status(400).send("Discord username taken");
