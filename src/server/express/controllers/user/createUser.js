@@ -12,7 +12,13 @@ async function createUser(req, res) {
   }
 
   console.log("here");
-  let discordNameIsValid = await isDiscordNameValid(discordName);
+  try {
+    let discordNameIsValid = await isDiscordNameValid(discordName);
+  } catch (err) {
+    console.log(err);
+    console.log(err.message);
+  }
+  console.log("there");
   if (!discordNameIsValid) {
     return res.status(400).send("Discord username taken");
   }
@@ -20,10 +26,15 @@ async function createUser(req, res) {
   let token = crypto.randomBytes(40).toString("hex");
 
   console.log("over here");
-  await db.query(
-    "INSERT INTO user_accounts (name, discordName, token) VALUES ($1, $2, $3)",
-    [name, discordName, token]
-  );
+  try {
+    await db.query(
+      "INSERT INTO user_accounts (name, discordName, token) VALUES ($1, $2, $3)",
+      [name, discordName, token]
+    );
+  } catch (err) {
+    console.log(err);
+    console.log(err.message);
+  }
   console.log("over there");
 
   res.send(token);
