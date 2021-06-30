@@ -2,9 +2,9 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="210mm"
-   height="297mm"
-   viewBox="0 0 210 297"
+   width="166.9922mm"
+   height="79.552948mm"
+   viewBox="0 0 166.9922 79.552948"
    version="1.1"
    id="svg5"
    inkscape:version="1.1 (c4e8f9ed74, 2021-05-24)"
@@ -29,9 +29,9 @@
      showborder="false"
      inkscape:snap-others="true"
      inkscape:snap-smooth-nodes="true"
-     inkscape:zoom="1"
-     inkscape:cx="875.5"
-     inkscape:cy="396"
+     inkscape:zoom="1.4142136"
+     inkscape:cx="364.51354"
+     inkscape:cy="195.16147"
      inkscape:window-width="1898"
      inkscape:window-height="1035"
      inkscape:window-x="10"
@@ -82,14 +82,15 @@
   <g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
-     id="layer1">
+     id="layer1"
+     transform="translate(-21.667668,-104.10564)">
     <g
        aria-label="T"
        id="text1772"
        style="font-size:246.131px;font-family:'Libertinus Serif';-inkscape-font-specification:'Libertinus Serif, Normal';letter-spacing:0px;stroke-width:6.15333" />
     <g
        id="g3829"
-       transform="translate(7.5157557,-0.82498085)">
+       transform="matrix(0.46881088,0,0,0.46881088,12.712352,82.488869)">
       <path
          id="path34098"
          style="color:#000000;font-size:246.131px;font-family:'Libertinus Serif';-inkscape-font-specification:'Libertinus Serif, Normal';letter-spacing:0px;fill:#ececec;fill-opacity:1;stroke-width:6.15334;-inkscape-stroke:none;filter:url(#filter874)"
@@ -120,14 +121,14 @@
     </g>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:177.642px;line-height:1.25;font-family:'Libertinus Serif';-inkscape-font-specification:'Libertinus Serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;stroke-width:4.44104"
-       x="144.8705"
-       y="210.36179"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:83.2805px;line-height:1.25;font-family:'Libertinus Serif';-inkscape-font-specification:'Libertinus Serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;stroke-width:2.08201"
+       x="77.105751"
+       y="181.49553"
        id="text1916"><tspan
          sodipodi:role="line"
          id="tspan1914"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:177.642px;font-family:'Libertinus Serif';-inkscape-font-specification:'Libertinus Serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:4.44104"
-         x="144.8705"
-         y="210.36179">attl</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:83.2805px;font-family:'Libertinus Serif';-inkscape-font-specification:'Libertinus Serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:2.08201"
+         x="77.105751"
+         y="181.49553">attl</tspan></text>
   </g>
 </svg>
