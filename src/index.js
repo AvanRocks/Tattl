@@ -1,6 +1,2 @@
-try {
-  require("./server");
-  require("./bot");
-} catch (err) {
-  console.log(err.message);
-}
+require("./server");
+require("./bot");
