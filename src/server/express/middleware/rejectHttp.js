@@ -1,10 +1,15 @@
 function rejectHttp(req, res, next) {
-  console.log(req.protocol);
-  if (req.protocol !== "https") {
-    return res.status(403).send({ message: "SSL required" });
+  let sslUrl;
+
+  if (
+    process.env.NODE_ENV === "production" &&
+    req.headers["x-forwarded-proto"] !== "https"
+  ) {
+    sslUrl = ["https://", req.hostname, req.url].join("");
+    return res.redirect(sslUrl);
   }
 
-  next();
+  return next();
 }
 
 module.exports = rejectHttp;
