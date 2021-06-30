@@ -5,6 +5,7 @@ console.log(pool);
 
 async function test() {
   try {
+    console.log("testing");
     const dbRes = await pool.query("SELECT * from user_accounts");
     console.log("worked");
     console.log(dbRes);
