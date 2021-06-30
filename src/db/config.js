@@ -1,7 +1,7 @@
 // set config for production (heroku).
 // for dev environment, env variables are used
 let config = {};
-if (process.env.NODE_ENV === "produdction") {
+if (process.env.NODE_ENV === "production") {
   config = {
     connectionString: process.env.DATABASE_URL,
     ssl: {
