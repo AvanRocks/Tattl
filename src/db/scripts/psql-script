@@ -1,0 +1,11 @@
+CREATE TABLE user_accounts (
+		userId integer GENERATED ALWAYS AS IDENTITY PRIMARY KEY ,
+		name text NOT NULL,
+		discordName text UNIQUE NOT NULL,
+		token text UNIQUE NOT NULL
+);
+
+CREATE TABLE watch_list (
+		userId integer REFERENCES user_accounts ON DELETE CASCADE,
+		watchUrl text NOT NULL
+);

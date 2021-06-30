@@ -1,0 +1,7 @@
+{
+  "prefix": "!",
+  "botChannelId": "857647939680600096",
+  "guildId": "850559389752492113",
+  "commandList": ["check", "listMembers", "getWatchList", "listOnlineMembers"],
+  "watchHandlersList": ["general"]
+}
