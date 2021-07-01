@@ -23,13 +23,16 @@ function blockGee() {
 }
 
 async function expose(msg) {
-  let { discordName, url } = msg;
+  let { discordName, url, title } = msg;
   let user = getUser(discordName);
+  let logStr = "";
   if (user && isUser(user, "George") && !geeIsAllowed) {
-    await sendMsg(`${user} visited: <${url}>`);
+    logStr = `${user} visited: <${url}>`;
   } else {
-    await sendMsg(`${user} visited: ${url}`);
+    logStr = `${user} visited: ${url}`;
   }
+  logStr += `\n${title}`;
+  await sendMsg(logStr);
 }
 
 module.exports = {

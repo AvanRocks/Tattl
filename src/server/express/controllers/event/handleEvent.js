@@ -3,7 +3,7 @@ const getUserId = require("../../../../db/utils/getUserId");
 const msgRouter = require("../../../../handlers");
 
 async function handleEvent(req, res) {
-  let { type, token, url } = req.body;
+  let { type, token, url, title } = req.body;
 
   if (!type || !token || !url) {
     res.status(400).send("Please provide all event parameters");
@@ -17,6 +17,7 @@ async function handleEvent(req, res) {
     type,
     discordName,
     url,
+    title,
   };
 
   msgRouter(msg);
