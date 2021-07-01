@@ -6,4 +6,5 @@ module.exports = {
   name: "check",
   description: "Check if the bot is running",
   execute: check,
+  numArgs: 0,
 };

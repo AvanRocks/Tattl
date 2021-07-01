@@ -7,7 +7,9 @@
     "listMembers",
     "getWatchList",
     "listOnlineMembers",
-    "help"
+    "help",
+    "allowGee",
+    "blockGee"
   ],
   "watchHandlersList": ["general"]
 }

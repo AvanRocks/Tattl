@@ -4,6 +4,7 @@ const dbGetWatchList = require("../../db/utils/getWatchList");
 const sendPaginatedMsg = require("../utils/sendPaginatedMsg");
 
 async function getWatchList(msg, args) {
+  /*
   if (args.length === 0) {
     msg.channel.send(
       "Please provide a member's name or Discord username as the first argument"
@@ -13,6 +14,7 @@ async function getWatchList(msg, args) {
     msg.channel.send("Too many arguments");
     return;
   }
+  */
 
   let user = args[0];
   let userId = null;
@@ -51,4 +53,5 @@ module.exports = {
   description:
     "Show a member's watchList (i.e. the list of urls they are tracking)",
   execute: getWatchList,
+  numArgs: 1,
 };

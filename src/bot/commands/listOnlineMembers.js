@@ -40,4 +40,5 @@ module.exports = {
   description:
     "List all the members whose tattle browser extension is connected",
   execute: listOnlineMembers,
+  numArgs: 0,
 };

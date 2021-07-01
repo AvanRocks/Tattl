@@ -7,9 +7,12 @@ async function initGuild() {
   if (guild.available) {
     let members = await guild.members.fetch();
     members.each((member) => {
-      users.set(member.user.username, member.user);
+      console.log(member.user);
+      const user = member.user;
+      const taggedUsername = `${user.username}#${user.discriminator}`;
+      users.set(taggedUsername, user);
       if (member.nickname) {
-        users.set(member.nickname, member.user);
+        users.set(member.nickname, user);
       }
     });
   }

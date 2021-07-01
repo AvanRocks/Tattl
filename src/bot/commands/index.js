@@ -18,6 +18,18 @@ client.on("message", async (msg) => {
 
   const command = client.commands.get(commandName);
 
+  if (args.length !== command.numArgs) {
+    if (command.numArgs === 0) {
+      sendMsg(`That command takes no arguments`);
+    } else if (command.numArgs === 1) {
+      sendMsg(`Please provide ${command.numArgs} argument`);
+    } else {
+      sendMsg(`Please provide ${command.numArgs} arguments`);
+    }
+
+    return;
+  }
+
   try {
     command.execute(msg, args);
   } catch (error) {

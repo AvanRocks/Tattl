@@ -16,4 +16,5 @@ module.exports = {
   name: "help",
   description: "Display a help message",
   execute: help,
+  numArgs: 0,
 };

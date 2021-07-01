@@ -53,4 +53,5 @@ module.exports = {
   name: "listMembers",
   description: "List all users registered with accountability bot",
   execute: listMembers,
+  numArgs: 0,
 };
