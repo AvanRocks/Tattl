@@ -4,12 +4,12 @@ const knownUsers = new Map([
 ]);
 
 function isUser(user, allowedUserName) {
-  const userId = knownUsers.get(allowedUserName);
-  if (!userId) {
+  if (knownUsers.has(allowedUserName)) {
+    const userId = knownUsers.get(allowedUserName);
+    return user.id == userId;
+  } else {
     return false;
   }
-
-  return user.id == userId;
 }
 
 module.exports = isUser;
