@@ -25,7 +25,7 @@ function blockGee() {
 async function expose(msg) {
   let { discordName, url } = msg;
   let user = getUser(discordName);
-  if (isUser(user, "George") && !geeIsAllowed) {
+  if (user && isUser(user, "George") && !geeIsAllowed) {
     await sendMsg(`${user} visited: <${url}>`);
   } else {
     await sendMsg(`${user} visited: ${url}`);
