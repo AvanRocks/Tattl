@@ -9,7 +9,7 @@ function isUser(user, allowedUserName) {
     return new Error("Unknown user");
   }
 
-  return user.id === userId;
+  return user.id == userId;
 }
 
 module.exports = isUser;
