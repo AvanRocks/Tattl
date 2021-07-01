@@ -6,7 +6,7 @@ const knownUsers = new Map([
 function isUser(user, allowedUserName) {
   const userId = knownUsers.get(allowedUserName);
   if (!userId) {
-    return new Error("Unknown user");
+    return false;
   }
 
   return user.id == userId;
