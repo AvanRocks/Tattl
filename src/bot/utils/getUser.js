@@ -7,7 +7,6 @@ async function initGuild() {
   if (guild.available) {
     let members = await guild.members.fetch();
     members.each((member) => {
-      console.log(member.user);
       const user = member.user;
       const taggedUsername = `${user.username}#${user.discriminator}`;
       users.set(taggedUsername, user);
