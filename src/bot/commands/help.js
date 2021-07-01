@@ -6,6 +6,8 @@ help                Display a help message
 check               Check if the bot is running
 listMembers         List all users registered with accountability bot
 listOnlineMembers   List all the members whose tattle browser extension is connected
+allowGee   Allow George to send url previews
+blockGee   Block George from sending url previews
 `;
 
 async function help(msg) {
