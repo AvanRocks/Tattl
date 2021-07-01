@@ -1,4 +1,5 @@
 const { client } = require("../client");
+const { sendMsg } = require("../utils/sendMsg");
 
 const helpTxt = `
 help    Display a help message
@@ -7,8 +8,8 @@ listMembers   List all users registered with accountability bot
 listOnlineMembers   List all the members whose tattle browser extension is connected
 `;
 
-function help(msg) {
-  msg.send(`\`\`\`${helpTxt}\`\`\``);
+async function help(msg) {
+  await sendMsg(`\`\`\`${helpTxt}\`\`\``);
 }
 
 module.exports = {

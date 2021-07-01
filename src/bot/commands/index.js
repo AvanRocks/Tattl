@@ -21,6 +21,7 @@ client.on("message", async (msg) => {
   try {
     command.execute(msg, args);
   } catch (error) {
+    console.log(error.message);
     await sendMsg("Error");
   }
 });
