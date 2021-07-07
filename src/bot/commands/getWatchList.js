@@ -33,8 +33,11 @@ async function getWatchList(msg, args) {
 
   const watchListData = [];
   watchList.forEach((url, index) => {
-    if (url.startsWith("*://*.") && url.endsWith("/*")) {
-      url = url.slice(6, -2);
+    if (url.startsWith(`.*:\\/\\/(.*.)?`)) {
+      url = url.slice(13);
+    }
+    if (url.endsWith("*")) {
+      url = url.slice(0, -1);
     }
 
     watchListData.push(url);
